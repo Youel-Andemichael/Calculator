@@ -1,0 +1,19 @@
+.calculator{
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons{
+    display: flex;
+    border: 2px solid #848884;
+    border-radius: 4px;
+
+}
+
+.operator{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+
