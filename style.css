@@ -1,19 +1,48 @@
-.calculator{
+.calculator {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center; /* Align buttons to the center horizontally */
+    width: 100%; /* Increase width if necessary */
+    max-width: 500px; /* Adjust this value based on your design needs */
 }
 
-.buttons{
+.buttons {
     display: flex;
     border: 2px solid #848884;
     border-radius: 4px;
-
+    width: 100%; /* Ensure the container fills its parent */
+    flex-wrap: nowrap; /* Ensure no wrapping occurs at this level */
 }
 
-.operator{
+.buttons > div {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 4px;
+    width: 100%;
+    flex-wrap: nowrap; /* Ensure no wrapping occurs at this level */
 }
 
+.buttons > div > button { /* Space between buttons */
+    margin: 5px;
+    flex: 1 0 auto; /* Allow each button to grow and fill the space, with no shrinking */
+    min-width: 60px; /* Minimum width for each button, adjust if needed */
+}
+
+.buttons-allNumbers {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensure proper vertical spacing */
+    flex-wrap: nowrap; /* Prevents wrapping of the buttons */
+    width: 100%; /* Increase the width to fit buttons */
+    margin: 5px; /* Add margin to create space between number buttons */
+}
+
+.buttons-operators {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Adjust as needed to fit all operator buttons on one line */
+}
+
+.operator, .number {
+    margin: 5px; /* Add margin to create space between operator buttons */
+    flex: 1 0 auto; /* Allow buttons to grow */
+    min-width: 60px; /* Increase min-width to prevent wrapping */
+}
